@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio - Ferney Ruiz</title>
+</head>
+
+<body>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#info-basica">Información básica</a></li>
+            <li><a href="#formacion">Formación académica</a></li>
+            <li><a href="#contacto">Contáctenos</a></li>
+            <li><a href="#redes">Redes sociales</a></li>
+        </ul>
+    </nav>
+
+    <!-- Encabezado -->
+    <header id="inicio">
+        <h1>Ferney Moises Ruiz Algarin</h1>
+        <img src="img/foto-perfil.jpeg" alt="Fotografía personal" width="300">
+        <h2>Estudiante de Ingeniería de Sistemas</h2>
+        <p>"La tecnología es el puente hacia el futuro."</p>
+    </header>
+
+    <!-- Información básica -->
+    <section id="info-basica">
+        <h2>Información básica</h2>
+        <p><strong>Nombre:</strong> Ferney Moises Ruiz Algarin</p>
+        <p><strong>Fecha y lugar de nacimiento:</strong> 09/19/2005, Sahagún-Córdoba</p>
+        <p><strong>Dirección:</strong> Vereda Holanda</p>
+        <p><strong>Teléfono:</strong> +57 301 264 8337</p>
+        <p><strong>Email:</strong> ferney2005ruiz@email.com</p>
+        <p><strong>Descripción:</strong> Soy estudiante apasionado por la tecnología y el diseño gráfico. Me interesa el
+            desarrollo web, la programación y la innovación digital. Me caracterizo por ser responsable, creativo y con
+            deseos de superación constante.</p>
+    </section>
+
+    <!-- Información académica -->
+    <section id="formacion">
+        <h2>Formación académica</h2>
+        <ul>
+            <li><strong>Bachillerato:</strong> INERASA (2016 - 2022)</li>
+            <li><strong>Pregrado:</strong> Actualmente cursando VI semestre de Ingeniería de Sistemas en Universidad de Córdoba
+                (2023 - presente)</li>
+        </ul>
+
+        <h3>Cursos y certificaciones</h3>
+        <ul>
+            <li>Curso de MatLab Onrap</li>
+        </ul>
+
+        <h3>Competencias y habilidades</h3>
+        <p>Programación en Java</p>
+        <progress value="64" max="100"></progress><br>
+
+        <p>HTML & CSS</p>
+        <progress value="50" max="100"></progress><br>
+
+        <p>JavaScript</p>
+        <progress value="20" max="100"></progress><br>
+
+        <p>Bases de datos (SQL y NoSQL)</p>
+        <progress value="40" max="100"></progress><br>
+
+        <p>Diseño gráfico</p>
+        <progress value="90" max="100"></progress><br>
+
+        <h3>Idiomas</h3>
+        <p>Español (Nativo)</p>
+        <progress value="100" max="100"></progress><br>
+
+        <p>Inglés (Intermedio)</p>
+        <progress value="50" max="100"></progress><br>
+    </section>
+
+
+    <!-- Formulario de contacto -->
+    <section id="contacto">
+        <h2>Contáctenos</h2>
+        <form>
+            <label>Nombre completo: <input type="text" name="nombre" required></label><br><br>
+            <label>Correo electrónico: <input type="email" name="email" required></label><br><br>
+            <label>Número de teléfono: <input type="tel" name="telefono"></label><br><br>
+            <label>Fecha de nacimiento: <input type="date" name="fecha"></label><br><br>
+            <label>Horario disponible: <input type="time" name="hora"></label><br><br>
+            <label>Edad: <input type="number" name="edad" min="1"></label><br><br>
+
+            <p>Género:</p>
+            <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+            <label><input type="radio" name="genero" value="femenino"> Femenino</label>
+            <label><input type="radio" name="genero" value="otro"> Otro</label><br><br>
+
+            <label>Área de interés:
+                <select name="area">
+                    <option>Desarrollo Web</option>
+                    <option>Bases de Datos</option>
+                    <option>Inteligencia Artificial</option>
+                    <option>Diseño Gráfico</option>
+                </select>
+            </label><br><br>
+
+            <p>Preferencia de contacto:</p>
+            <label><input type="checkbox" name="contacto" value="email"> Email</label>
+            <label><input type="checkbox" name="contacto" value="telefono"> Teléfono</label>
+            <label><input type="checkbox" name="contacto" value="whatsapp"> WhatsApp</label><br><br>
+
+            <label>URL personal o portafolio: <input type="url" name="url"></label><br><br>
+
+            <label>Mensaje:<br>
+                <textarea name="mensaje" rows="5" cols="40"></textarea>
+            </label><br><br>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+        </form>
+    </section>
+
+    <!-- Footer con redes sociales -->
+    <footer id="redes">
+        <h2>Redes sociales</h2>
+        <ul>
+            <li><a href="https://github.com/tuperfil" target="_blank">GitHub</a></li>
+            <li><a href="https://facebook.com/ferneyruiz" target="_blank">Facebook</a></li>
+            <li><a href="https://instagram.com/ferneymra" target="_blank">Instagram</a></li>
+        </ul>
+        <p>© 2025 - Portafolio creado por Ferney Ruiz</p>
+    </footer>
+
+</body>
+
+</html>
