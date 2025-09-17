@@ -5,28 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi portafolio - Ferney Ruiz</title>
+    <link rel="stylesheet" href="estilo.css"> 
 </head>
 
 <body>
 
     <!-- Menú de navegación -->
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#info-basica">Información básica</a></li>
-            <li><a href="#formacion">Formación académica</a></li>
-            <li><a href="#contacto">Contáctenos</a></li>
-            <li><a href="#redes">Redes sociales</a></li>
-        </ul>
-    </nav>
+    <header class="menu-navegacion">
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <nav>
+            <ul class="link-navegacion">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#info-basica">Información básica</a></li>
+                <li><a href="#formacion">Formación académica</a></li>
+                <li><a href="#contacto">Contáctenos</a></li>
+                <li><a href="#redes">Redes sociales</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Encabezado -->
-    <header id="inicio">
+    <section id="inicio">
         <h1>Ferney Moises Ruiz Algarin</h1>
-        <img src="img/foto-perfil.jpeg" alt="Fotografía personal" width="300">
+        <img src="img/foto-perfil.jpeg" alt="Fotografía personal">
         <h2>Estudiante de Ingeniería de Sistemas</h2>
         <p>"La tecnología es el puente hacia el futuro."</p>
-    </header>
+    </section>
 
     <!-- Información básica -->
     <section id="info-basica">
@@ -46,7 +52,8 @@
         <h2>Formación académica</h2>
         <ul>
             <li><strong>Bachillerato:</strong> INERASA (2016 - 2022)</li>
-            <li><strong>Pregrado:</strong> Actualmente cursando VI semestre de Ingeniería de Sistemas en Universidad de Córdoba
+            <li><strong>Pregrado:</strong> Actualmente cursando VI semestre de Ingeniería de Sistemas en Universidad de
+                Córdoba
                 (2023 - presente)</li>
         </ul>
 
@@ -124,7 +131,7 @@
     <!-- Footer con redes sociales -->
     <footer id="redes">
         <h2>Redes sociales</h2>
-        <ul>
+        <ul class="links">
             <li><a href="https://github.com/tuperfil" target="_blank">GitHub</a></li>
             <li><a href="https://facebook.com/ferneyruiz" target="_blank">Facebook</a></li>
             <li><a href="https://instagram.com/ferneymra" target="_blank">Instagram</a></li>
