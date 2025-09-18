@@ -1,115 +1,350 @@
+/* VARIABLES Y ESTILOS GLOBALES */
+:root {
+    --background-color: #121212;
+    --secondary-background: #1E1E1E;
+    --text-color: #E0E0E0;
+    --accent-color: #007BFF;
+    --border-color: #333333;
+    --font-family: 'Arial', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-:root {
-    --color-azul-oscuro: #0d023b;
-    --color-azul-claro: #2a07b6;
-    --color-azul-cielo: #18d4f5;
-    --color-blanco: #d3c8ff;
-    --color-negro: #03000f;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* ajusta según la altura de tu header */
 }
 
-header {
-    display: flex;
+main {
+    padding-top: 80px;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* NAVEGACIÓN */
+.menu-navegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    padding: 2rem;
-    background-color: var(--color-azul-oscuro);
+    display: flex;
     justify-content: space-between;
-}
-
-.logo {
-    font-weight: 700;
-    font-size: 2rem; 
-    padding-right: 2rem;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-background);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 .logo a {
-    color: var(--color-azul-cielo); 
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    font-weight: bold;
     text-decoration: none;
 }
-.menu-navegacion ul {
-    display: flex;
-    padding: 0.6rem; 
-    gap: 2rem;
-}
 
-.menu-navegacion .link-navegacion li {
+.link-navegacion {
     list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem; 
-}  
+    gap: 25px; 
+}
 
-.menu-navegacion .link-navegacion a {
+.link-navegacion a {
+    color: var(--text-color);
     text-decoration: none;
-    color: var(--color-azul-cielo);
     font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
+.link-navegacion a:hover {
+    color: var(--accent-color);
+}
+
+/* SECCIONES PRINCIPALES */
 section {
-    width: 100%;
-    height: auto;
-    padding: 4rem;
-    background-color: var(--color-blanco);
-    color: var(--color-negro);
+    padding: 80px 20px; 
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border-color);
 }
 
-section#inicio {
+section:last-of-type {
+    border-bottom: none;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+h1 {
+    font-size: 2.8rem;
     text-align: center;
 }
 
-section h1 {
-    font-size: 2rem;
-    font-weight: 700;  
-    margin-bottom: 2rem;
+h2 {
+    font-size: 2.2rem;
 }
 
-section img {
-    width:400px; 
-    height: auto;
-    border-radius: 20px;
-    margin-bottom: 2rem;
+h3 {
+    font-size: 1.5rem;
+    color: #cccccc;
 }
 
-section h2 {
-    font-size: 1.6rem;
-    font-weight: 600; 
-    margin: 1rem;
-    text-align: center; 
+/* SECCIÓN DE INICIO */
+#inicio {
+    text-align: center;
 }
 
-section p {
+#inicio img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+}
+
+#inicio p {
+    font-style: italic;
+    color: #b3b3b3;
+    font-size: 1.1rem;
+}
+
+/* OTRAS SECCIONES */
+#info-basica p, #formacion ul, #formacion p {
+    margin-bottom: 12px;
+}
+
+strong {
+    color: var(--text-color);
+}
+
+#formacion ul {
+    list-style-position: inside;
+    padding-left: 15px;
+}
+
+/* BARRAS DE PROGRESO */
+progress {
+    width: 100%;
+    height: 22px;
+    appearance: none;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--secondary-background);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--accent-color);
+    border-radius: 0;
+    transition: width 0.4s ease;
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--accent-color);
+}
+
+/* FORMULARIO DE CONTACTO */
+#contacto form {
+    max-width: 650px; 
+    margin: 0 auto;  
+    display: grid;
+    gap: 10px;      
+}
+
+#contacto label {
+    font-weight: bold;
+}
+
+#contacto input,
+#contacto select,
+#contacto textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    background-color: var(--secondary-background);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
     font-size: 1rem;
 }
 
-footer {
-    background-color: var(--color-azul-oscuro);
-    color: var(--color-blanco);
-    padding: 2rem 1.6rem;
-    text-align: center; 
+#contacto input:focus,
+#contacto select:focus,
+#contacto textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
 }
 
-footer .links a {
-    text-decoration: none;
-    color: var(--color-azul-cielo);
-    margin: 1rem;   
+#contacto button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#contacto button[type="submit"] {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+#contacto button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); 
+}
+
+#contacto button[type="reset"] {
+    background-color: var(--border-color);
+    color: var(--text-color);
+}
+
+#contacto button[type="reset"]:hover {
+    background-color: #444;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--secondary-background);
 }
 
 footer .links {
-    list-style: none; 
-    padding: 1rem; 
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
 }
 
-footer .links li {
-    padding: 0.4rem;
+footer .links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+footer .links a:hover {
+    color: var(--accent-color);
+}
+
+footer p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* DISEÑO RESPONSIVO */
+@media (max-width: 768px) {
+    .menu-navegacion {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .link-navegacion {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    section {
+        padding-top: 180px; 
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* ESTILOS DE OPCIONES DE FORMULARIO (GÉNERO Y CONTACTO) */
+.form-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.form-options label {
+    background-color: var(--secondary-background);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: normal;
+}
+
+.form-options label:hover {
+    background-color: #333;
+    border-color: var(--accent-color);
+}
+
+.form-options input[type="radio"],
+.form-options input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-options input[type="radio"]:checked + label,
+.form-options input[type="checkbox"]:checked + label {
+    background-color: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+}
+
+/* Botón flotante volver arriba */
+.btn-subir {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 2rem; /* tamaño del icono */
+    padding: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.btn-subir:hover {
+    background-color: #0056b3;
+    transform: translateY(-4px);
+}
+
+.btn-subir ion-icon {
+    pointer-events: none; /* evita problemas al hacer clic */
 }
